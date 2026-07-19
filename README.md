@@ -68,6 +68,24 @@ This project fetches and formats your LeetCode statistics, including the number 
 - `src/leetcode/languageStats.js`: Contains the GraphQL queries for fetching language and submission statistics.
 - `.env`: Environment variables for GitHub authentication and user settings.
 
+## ASCII Art Gist
+
+In addition to the stats gist, this repo keeps a second pinned gist showing an "ASCII art of the day" that rotates automatically.
+
+- Art pieces live as plain `.txt` files in the [`art/`](art/) folder. **To add art, just drop in another `.txt` file** — no code changes needed.
+- [`art.js`](art.js) picks one piece per day (deterministically, by day of the year via [`src/art/pickArt.js`](src/art/pickArt.js)) and updates the art gist.
+- It runs on the same schedule as the stats gist (see the extra step in [`.github/workflows/update.yml`](.github/workflows/update.yml)).
+
+### Setup
+
+1. Create a second gist on GitHub (any placeholder content is fine) and copy its ID.
+2. Add it as a repository secret named `ART_GIST_ID`. The existing `GH_TOKEN` secret is reused (it already has gist scope).
+3. To run locally, add `ART_GIST_ID` to your `.env` and run:
+
+   ```bash
+   node art.js
+   ```
+
 ## Dependencies
 
 - `axios`: Promise-based HTTP client for the browser and Node.js.
