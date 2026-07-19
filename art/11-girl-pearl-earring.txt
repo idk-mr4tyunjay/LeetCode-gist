@@ -1,12 +1,7 @@
-       .-""""""""-.
-      /   .     .   \
-     |   ( o )( o )  |
-     |      /\       |
-     |     (  )      |
-      \    '--'    /  o   <- pearl
-       '-.______.-'_.-'
-      /   turban    \
-     |  ~~~~~~~~~~~  |
-      \_____________/
-   Girl with a Pearl Earring
-           Vermeer
+   .-""""-.
+  / o    o \
+ |    <>    |
+ |   \__/   |  o  pearl
+  \  ____  /_.'
+   '.____.'
+  Girl w/ Pearl - Vermeer

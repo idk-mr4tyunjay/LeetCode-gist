@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import { Octokit } from '@octokit/rest';
 import { pickArt } from './src/art/pickArt.js';
+import { centerArt } from './src/art/centerArt.js';
 
 const {
     GH_TOKEN: github_token,
@@ -24,7 +25,7 @@ async function main() {
     }
 
     console.log(`Selected art: ${picked.filename}`);
-    await updateGist(picked.art);
+    await updateGist(centerArt(picked.art));
 }
 
 async function updateGist(content) {
@@ -43,7 +44,7 @@ async function updateGist(content) {
             gist_id,
             files: {
                 [filename]: {
-                    filename: `🎨 ASCII Art of the Day ✨.txt`,
+                    filename: `art.txt`,
                     content
                 }
             }

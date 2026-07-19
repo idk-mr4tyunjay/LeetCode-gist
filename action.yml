@@ -1,6 +1,6 @@
-name: "leetcode-gist"
+name: "pinned-gist"
 author: Mruthunjay
-description: "Update a pinned gist to show LeetCode stats"
+description: "Update pinned gists with LeetCode stats and daily ASCII art"
 branding:
   icon: code
   color: blue
